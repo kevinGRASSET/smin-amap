@@ -18,7 +18,10 @@ class App extends React.Component {
 
 		addVeggies(veggie) {
 			const veggies = {...this.state.veggies};
-			this.setState({veggies});
+			//this.setState({veggies});
+
+			const timeStamp = Date.now();
+			veggies['veggie-$(timeStamp'] = veggie;
 
 			veggies["veggie-1"] = veggie;
 		}
