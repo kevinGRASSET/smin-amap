@@ -16,9 +16,11 @@ class App extends React.Component {
 
 		}
 
-		addVeggies() {
-			const veggies = "veggies-1"
+		addVeggies(veggie) {
+			const veggies = {...this.state.veggies};
 			this.setState({veggies});
+
+			veggies["veggie-1"] = veggie;
 		}
 
 
