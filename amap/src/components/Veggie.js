@@ -1,0 +1,20 @@
+import React from 'react';
+
+class Veggie extends React.Component {
+  render() {
+  	const details = this.props.details
+    return (
+     <li className = "menu-veggie">
+     <img src={details.image} alt = {details.name} />
+     <h3 className = "veggie-name">
+     	{details.name}
+     	<span className="price">{details.price}</span>
+     </h3>
+     <p>{details.desc}</p>
+     <button>Ajouter un produit</button>
+     </li>
+    )
+  }
+}
+
+export default Veggie;

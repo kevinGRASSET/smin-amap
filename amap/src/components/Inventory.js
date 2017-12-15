@@ -1,18 +1,16 @@
 import React from 'react';
-import AddVergieForm from './AddVergieForm'
+import AddVeggieForm from './AddVeggieForm';
 
 class Inventory extends React.Component {
-	render(){
-
-		return (
-				<div>
-					<p>Inventory</p>
-					<AddVergieForm addVeggies={this.props.addVeggies}/>
-
-				</div>
-			
-			)
-				
-	}
+  render() {
+    return (
+      <div>
+        <p>Inventory</p>
+        <AddVeggieForm addVeggie={this.props.addVeggie}/>
+        <button onClick={this.props.loadSamples}>Charger des légumes</button>
+      </div>
+    )
+  }
 }
+
 export default Inventory;
