@@ -17,6 +17,7 @@ class AddVeggieForm extends React.Component {
     this.veggieForm.reset();
   }
 
+
   render() {
     return (
       <form ref={(input) => this.veggieForm = input} className="veggie-edit" onSubmit={(e) => this.createVeggie(e)}>

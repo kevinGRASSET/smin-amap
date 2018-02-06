@@ -50,7 +50,7 @@ class App extends React.Component {
           </ul>
         </div>
         <Order />
-        <Inventory addVeggie={this.addVeggie} loadSamples={this.loadSamples} />
+        <Inventory addVeggie={this.addVeggie} loadSamples={this.loadSamples}/>
       </div>
     )
   }

@@ -1,7 +1,9 @@
 import React from 'react';
+import Order from './Order';
 
 class Veggie extends React.Component {
-  render() {
+  render() 
+  {
   	const details = this.props.details
     return (
      <li className = "menu-veggie">
@@ -11,7 +13,7 @@ class Veggie extends React.Component {
      	<span className="price">{details.price}</span>
      </h3>
      <p>{details.desc}</p>
-     <button>Ajouter un produit</button>
+     <button  onClick={this.props.loadSamples} id="lol" name="lol" disabled={details.status === "unavailable"}>Ajouter aux panier</button>
      </li>
     )
   }

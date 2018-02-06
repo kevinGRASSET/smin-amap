@@ -17,8 +17,12 @@ class AddVergieForm extends React.Component {
 		}
 
 		this.props.addVeggie(veggie);
+		this.props.addVeggieOrder(veggie);
 		console.log(veggie);
 		this.veggieForm.reset();
+
+		
+		
 	}
 
 
@@ -36,9 +40,7 @@ class AddVergieForm extends React.Component {
 					<input ref={(input) =>this.image = input} type="text" placeholder= "Veggie Image"/>
 					<button type= "submit">Ajouter un article</button>
 				</form>
-			
-			)
-				
+			)		
 	}
 }
 export default AddVergieForm;
