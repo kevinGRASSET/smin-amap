@@ -60,6 +60,22 @@ class App extends React.Component {
     localStorage.setItem('orders', JSON.stringify(veggie));
   }
 
+    componentWillMount(){
+
+    if ((typeof JSON.parse(localStorage.getItem('orders')) !== "undefined") 
+      && (JSON.parse(localStorage.getItem('orders')) !== null)){
+      this.setState({
+        orders: JSON.parse(localStorage.getItem('orders')).orders
+      })
+    } 
+    else {
+      this.setState({
+        orders: {}
+      })
+      
+    }
+}
+
   render() {
     return (
       <div className="amap">

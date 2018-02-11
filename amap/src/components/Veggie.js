@@ -13,22 +13,16 @@ class Veggie extends React.Component {
         }
         this.props.addOrder(order);
     }
-
     
   render() {
     const details = this.props.details
 
-  var ajoutPanier = []
+  var tabProduit= []
     if (details.status === "available"){
-            ajoutPanier.push(<button onClick={() => this.createOrder()} key={ajoutPanier + this.props.details.name}>Ajouter au panier</button>)
+            tabProduit.push(<button onClick={() => this.createOrder()} key={tabProduit + this.props.details.name}>Ajouter au panier</button>)
         } else {
-            ajoutPanier.push(<button disabled>Plus de stock !</button>)
+            tabProduit.push(<button disabled>Plus de stock !</button>)
         }
-
-       
-        
-    
-
 
     return (
     <li className="menu-veggie">
@@ -38,14 +32,10 @@ class Veggie extends React.Component {
                     <span className="price">{details.price}</span>
                 </h3>
                 <p>{details.desc}</p>
-                {ajoutPanier}
+                {tabProduit}
             </li>
     )
-
-
   }
-
-
 }
 
 export default Veggie;
