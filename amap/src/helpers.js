@@ -1,5 +1,5 @@
 export function formatPrice(cents) {
-  return `$${(cents / 100).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
+  return `${(cents / 100).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
 }
 
 export function rando(arr) {
@@ -18,6 +18,5 @@ export function slugify(text) {
 export function getFunName() {
   const adjectives = ['adorable', 'agressif', 'beau', 'brave', 'confiant', 'chaleureux', 'dangereux', 'egoiste', 'fourbe', 'gentil', 'heureux', 'impartial', 'jovial', 'malicieux', 'placide', 'splendide', 'timide', 'triste', 'vilain'];
   const nouns = ['corps', 'pays', 'sens', 'temps', 'agent', 'arbre', 'argent', 'bateau', 'bureau', 'cheveu', 'ennemi', 'film', 'jardin', 'papier', 'patron', 'peuple', 'souvenir', 'ville', 'voyage', 'homme', 'abri', 'maison', 'analyse', 'femme', 'enfant'];
-  return `${rando(adjectives)}-${rando(nouns)}-${rando(adjectives)}`;
-
+  return `${rando(adjectives)}-${rando(adjectives)}-${rando(nouns)}`;
 }
