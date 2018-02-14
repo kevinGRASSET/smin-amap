@@ -3,6 +3,7 @@ import { formatPrice } from '../helpers.js';
 
 class Order extends React.Component {
 
+// Fonction qui permet de supprimer un produit dans la liste
   deleteProduit(order, veggie){
   		const orders = veggie
   		var that = this
@@ -37,7 +38,7 @@ class Order extends React.Component {
 			              		prix = prix + This.props.details[key].prixFinal
 			              		
 				              	return(
-				              		
+				              			//Affichage des élements dans le panier
 					              		<div>
 					              		    <p>{This.props.details[key].nombreProduits}Kg {This.props.details[key].name} {formatPrice(This.props.details[key].prixFinal)+"€"}</p>
 					              		    <button onClick={() => This.deleteProduit(This.props.details[key], This.props.details)}>Supprimer</button>
@@ -48,6 +49,7 @@ class Order extends React.Component {
 				        }
 		          		
 				          		{
+								//Calcul du prix et affichage
 						            Object
 					              	.keys(this.props.details)
 					              	.map(function (key){
@@ -60,6 +62,7 @@ class Order extends React.Component {
 	    } 
 	    else 
 	    {
+		    // cas ou il n'y a rien dans le panier
 	    	return (
 		    	<div className="order-wrap">
 			        <h2>Votre panier</h2>
