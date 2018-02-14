@@ -37,6 +37,7 @@ class App extends React.Component {
   }
 
 
+  // Ajout dans la page Order
 
     addOrder(order) {
     const orders = {...this.state.orders}
@@ -60,6 +61,7 @@ class App extends React.Component {
     localStorage.setItem('orders', JSON.stringify(veggie));
   }
 
+    //Permet de ne pas perdre le panier aux refresh de la page
     componentWillMount(){
 
     if ((typeof JSON.parse(localStorage.getItem('orders')) !== "undefined") 
