@@ -2,6 +2,7 @@ import React from 'react';
 
 class Veggie extends React.Component {
 
+   //Focntion pour créer les éléments
    createOrder() {
         const order = {
           name: this.props.details.name,
@@ -17,6 +18,7 @@ class Veggie extends React.Component {
   render() {
     const details = this.props.details
 
+    // Création d'un tableau de bouton et ajout 
   var tabProduit= []
     if (details.status === "available"){
             tabProduit.push(<button onClick={() => this.createOrder()} key={tabProduit + this.props.details.name}>Ajouter au panier</button>)
@@ -24,6 +26,7 @@ class Veggie extends React.Component {
             tabProduit.push(<button disabled>Plus de stock !</button>)
         }
 
+    //Affichage
     return (
     <li className="menu-veggie">
                 <img src={details.image} alt=""/>
